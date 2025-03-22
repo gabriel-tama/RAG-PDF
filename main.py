@@ -79,11 +79,9 @@ if user_query:
             st.write(response.response)
             # print(response.source_nodes)
             for m in response.metadata:
-                print("awela",m)
                 if response.metadata.get(m,{}).get("url",None):
                     sources.add(response.metadata.get(m).get("url"))
 
-            print(sources)
             sources_text = ""
             for i in sources:
                 sources_text+=f"{i.split('/')[-1][:-3]} Link : {i} \n\n"
@@ -97,5 +95,5 @@ if user_query:
             st.session_state.messages.append({
                 "role": "assistant", 
                 "content": response.response,
-                # "sources": response.source
+                "sources": sources_text
             })
