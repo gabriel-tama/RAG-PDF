@@ -13,7 +13,7 @@ class Config:
         self.hf_token: Optional[str] = os.getenv("HF_TOKEN")
         self.model_name = model_name
         self.embedding_model = embedding_model
-        self.tokenizer = AutoTokenizer.from_pretrained(model_name)
+        self.tokenizer = AutoTokenizer.from_pretrained(model_name,token=self.hf_token)
         
     def setup_global_settings(self):
         """Configure global settings for LlamaIndex."""
@@ -25,4 +25,3 @@ class Config:
             model_name=self.embedding_model
         )
 
-        

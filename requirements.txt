@@ -1,6 +1,6 @@
+streamlit
 llama-index 
 nltk
-langchain
 python-dotenv
 requests
 llama-index-llms-huggingface
