@@ -66,13 +66,7 @@ if user_query:
     # Get the response from the model
     with st.chat_message("assistant"):
         with st.spinner("Thinking..."):
-            # This is where you would connect to your RAG backend
-            # Replace with your actual RAG implementation
-
             
-            # Replace these placeholders with your actual RAG output
-            # answer = "This is a response from your RAG system. Connect this UI to your backend to get real answers."
-
             sources = set()
 
             # Display the answer

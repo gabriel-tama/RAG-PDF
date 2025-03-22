@@ -2,6 +2,8 @@
 
 This README provides instructions to set up and run the RAG (Retrieval-Augmented Generation) project.
 
+Note: Currently it only good on english only because model limitation.
+
 ## Prerequisites
 
 Ensure you have [Anaconda](https://www.anaconda.com/) or [Miniconda](https://docs.conda.io/en/latest/miniconda.html) or Docker installed on your system.

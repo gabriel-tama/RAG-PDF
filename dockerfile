@@ -9,11 +9,20 @@ RUN apt-get update && apt-get install -y \
     git \
     && rm -rf /var/lib/apt/lists/*
 
+RUN apt-get update && apt-get install -y tesseract-ocr
+
+RUN apt-get update && apt-get install ffmpeg libsm6 libxext6 poppler-utils  -y
+
 # Copy the requirements
 COPY requirements.txt requirements.txt
 
 # Install dependencies
 RUN pip install --no-cache-dir -r requirements.txt
+
+
+
+RUN pip install "unstructured[pdf]"
+
 
 # Copy the application code
 COPY . .
